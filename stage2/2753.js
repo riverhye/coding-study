@@ -17,3 +17,15 @@ else console.log(2);
 // !둘다 양수 => (x만 양수, y만 양수,) 둘다 음수
 // !둘다 음수 => x만 양수
 // !x만 양수 => y만 양수
+
+
+
+/** 연도 구하는 함수 */
+function year () {
+    console.log(1)
+}
+
+const a = year
+
+feature/main
+main_yh
