@@ -1,6 +1,12 @@
 const input = require('fs').readFileSync("/dev/stdin").toString().trim().split('\n');
-const n = input[0];
-const arr = input[1].split(' ');
-const v = input[2];
+const [n, arr, v] = input;
+const arrNum = arr.split(' ');
 
-console.log(arr.filter((el) => +el === +v).length);
+const result = arrNum.reduce((acc, cur, idx) => {
+	if(+cur === +v) {
+	acc++;
+	}
+	return acc;
+}, 0);
+
+console.log(result);
