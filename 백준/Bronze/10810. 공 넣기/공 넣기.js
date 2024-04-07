@@ -17,11 +17,7 @@ for (let i = 0; i < n; i++) {
 }
 
 for (let i = 1; i <= m; i++) {
-  let cmd = input[i].split(' ').map(Number);
-
-  let startIdx = cmd[0];
-  let endIdx = cmd[1];
-  let num = cmd[2];
+	let [startIdx, endIdx, num] = input[i].split(' ').map(Number);
 
   bucket[startIdx - 1] = num;
   bucket[endIdx - 1] = num;
