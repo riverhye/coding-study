@@ -1,10 +1,6 @@
-const input = require('fs').readFileSync("/dev/stdin").toString().trim().split('\n').map(Number);
+// 처음부터 나머지를 input으로 받는다.
+const input = require('fs').readFileSync("/dev/stdin").toString().trim().split('\n').map(el => (+el) % 42);
 
-// 서로 다른 값 === 중복 값을 제외한다.
-let setArr = new Set([]);
-
-for(let i = 0; i < input.length; i++) {
-	setArr.add(input[i] % 42);
-}
+let setArr = new Set(input);
 
 console.log(setArr.size);
