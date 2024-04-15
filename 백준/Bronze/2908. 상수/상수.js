@@ -1,6 +1,6 @@
 const [a, b] = require('fs').readFileSync('/dev/stdin').toString().split(' ');
 
-const A = Array.from(a).reverse().join('');
+const A = a.split('').reverse().join('');
 const B = b.split('').reverse().join('');
 
 let result = 0;
