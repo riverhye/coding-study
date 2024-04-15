@@ -1,3 +1,29 @@
+// Ver 1. 객체 : key와 value로 접근
+const str = require('fs').readFileSync('/dev/stdin').toString().trim().split('');
+
+const dialNumbers = {
+    'ABC': 3,
+    'DEF': 4,
+    'GHI': 5,
+    'JKL': 6,
+    'MNO': 7,
+    'PQRS': 8,
+    'TUV': 9,
+    'WXYZ': 10
+}
+
+let result = 0;
+for (let i = 0; i < str.length; i++) {
+    for(const dial in dialNumbers) {
+        if(dial.includes(str[i])) {
+            result += dialNumbers[dial];
+        }
+    }
+}
+
+console.log(result);
+
+// Ver 2. 배열 : for문과 switch - case, reduce 활용
 const str = require('fs').readFileSync('/dev/stdin').toString().trim().split('');
 
 let result = [];
