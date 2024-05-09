@@ -1,6 +1,7 @@
-let [T, ...input] = require('fs').readFileSync('/dev/stdin').toString().trim().split('\n');
+let input = require('fs').readFileSync('/dev/stdin').toString().trim().split('\n');
+input.shift();
 
-for(let i = 0; i < T * 2; i++) {
+for(let i = 0; i < input.length; i++) {
     const N = input[i];
     i++;
     const logs = input[i].split(' ').map(Number);
